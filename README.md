@@ -15,7 +15,7 @@ This is a classical computer‑vision pipeline (no deep learning): filtering, re
 
 ## Quickstart
 
-From the `multimodal_vein_fusion/` folder:
+From the repository root:
 
 ```bash
 # If your system has no `python` command (common on Linux), use `python3`.
@@ -161,7 +161,7 @@ When you click **Save Outputs** in the GUI (or run the CLI), the following are w
 
 ### 1) Install dependencies (recommended)
 
-From `multimodal_vein_fusion/`:
+From the repository root:
 
 ```bash
 python -m pip install -e .
@@ -235,10 +235,10 @@ print(result.metrics["coverage_pct"], result.metrics["recommended_insertion_poin
 
 Top level:
 
+- `.gitignore` — git ignore rules (keeps local venv/caches/build artifacts out of GitHub).
 - `README.md` — this documentation (pipeline description, algorithms, running instructions).
 - `pyproject.toml` — Python packaging metadata and dependencies (plus optional `scikit-image` extra).
 - `sitecustomize.py` — local helper that adds `src/` to `sys.path` when running from this folder.
-- `multimodal_vein_fusion/__init__.py` — “src layout” import shim so `python -m multimodal_vein_fusion.gui` works without installing.
 
 Core package (`src/multimodal_vein_fusion/`):
 
@@ -278,4 +278,4 @@ Generated / local artifacts (safe to ignore/remove):
 - `.pytest_cache/` — pytest cache.
 - `__pycache__/` — Python bytecode caches.
 - `src/multimodal_vein_fusion.egg-info/` — build/install metadata (often created by `pip install -e .`).
-- `multimodal_vein_fusion/.venv/` — a local virtual environment (not required; you can create your own elsewhere).
+- `.venv/` — a local virtual environment (not required; you can create your own elsewhere).
